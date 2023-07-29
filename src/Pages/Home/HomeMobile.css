@@ -1,0 +1,12 @@
+@media screen and (max-width: 990px) {
+    body {
+        --padding: 1% 5% !important;
+        /* margin-bottom: 10% !important; */
+
+    }
+
+    .desktopOnly{
+        display: none !important;
+    }
+
+}

@@ -1,0 +1,205 @@
+.mobileOnly{
+    display: none;
+}
+.banner {
+    padding: 20% 0%;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(223, 208, 208);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    margin-bottom: 2.5%;
+
+    .bannerText {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        .tagLine {
+            font-size: 4em;
+            font-weight: 600;
+        }
+
+        .subTagline {
+            font-weight: 500;
+            font-size: 2em;
+        }
+    }
+
+    .checkAvailabilityContainer {
+        position: absolute;
+        display: flex;
+        bottom: -10%;
+        /* align-items: ; */
+        justify-content: space-around;
+        color: black;
+        padding: 2% 2%;
+        width: 50%;
+        background-color: white;
+        left: 25%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        .value {
+            display: flex;
+            column-gap: 5%;
+            align-items: center;
+            
+            .datepickerOpener{
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            .date {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .month {
+                font-weight: 600;
+            }
+
+        }
+
+        .box {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            .text {
+                font-weight: 700;
+                color: gray;
+                font-size: 0.9em;
+            }
+            
+            .adult {
+                .value {
+                    /* font-size: 3rem; */
+                    font-size: 3rem;
+                    width: 50%;
+                    outline: none;
+                    border: none;
+                    padding: 6% 0%;
+                }
+            }
+
+        }
+
+        .checkAvailability {
+            width: 25%;
+
+            .checkAvailabilityBtn {
+                background-color: green;
+                color: white;
+                padding: 3% 2.5%;
+                width: 1005;
+                cursor: pointer;
+                text-align: center;
+                border-radius: 10px;
+            }
+        }
+
+        .box>div {
+            width: 20%
+        }
+    }
+}
+
+.roomsContainer {
+    background-color: var(--orange);
+    display: flex;
+    justify-content: space-around;
+
+    .room {
+        padding: 13% 10%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 23%;
+    }
+}
+
+.experiencesContainer {
+    background-color: black;
+    color: white;
+    padding: var(--padding);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        width: 60%;
+
+        .head {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .discription {
+            padding: 3% 0%;
+            line-height: 1.7;
+        }
+    }
+
+    .right {
+        width: 35%;
+        background-size: contain;
+    }
+}
+
+.testimonialContainer {
+    padding: var(--padding);
+
+    .head {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .testimonialSliderContainer {
+        text-align: center;
+
+        .testimonial {
+            padding: 2% 20%;
+            font-style: italic;
+            line-height: 2;
+        }
+
+        .rating {
+            color: gold;
+        }
+
+        .auther {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+    }
+
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+    background-color: var(--orange);
+    color: white;
+
+    .map {
+        width: 70%;
+    }
+
+    .address {
+        line-height: 3;
+
+        width: 27%;
+        font-size: 1.3rem;
+    }
+}
