@@ -1,16 +1,35 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;500;600;700&display=swap');
+html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
-*{
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* * {
   outline: 1px red solid;
+} */
+
+#root,
+body,
+html {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
 }
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   font-weight: 400;
-  width: 100%;
   font-synthesis: none;
- 
+  position: relative;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,4 +51,6 @@ html{
 body {
   margin: 0;
   width: 100%;
+  min-height: 100dvh;
+  font-weight: 300;
 }

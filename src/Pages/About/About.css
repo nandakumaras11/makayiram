@@ -1,0 +1,64 @@
+.aboutUsBanner {
+    padding: 5%;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    background-color: bisque;
+    background-blend-mode: multiply;
+
+    .head {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .taglin {
+        font-size: 2rem;
+
+    }
+}
+
+.aboutContainer {
+    padding: var(--padding);
+    margin-top: 2%;
+    padding-bottom: 4%;
+    display: flex;
+    column-gap: 3%;
+    align-items: center;
+
+    /* justify-content: space-; */
+    .videoThumb {
+        width: 30%;
+        padding: 10%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 10px;
+    }
+
+    .aboutContent {
+        width: 100%;
+        font-size: 0.9em;
+        color: gray;
+        font-weight: 300;
+
+        .description {
+            line-height: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+        .aboutUsBanner {
+            padding: 20% 0%;
+            .head{
+                font-size: 2.5rem;
+            }
+            .taglin{
+                font-size: 1.5rem;
+                padding-top: 5%;
+            }
+        }
+    }

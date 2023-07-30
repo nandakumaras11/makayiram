@@ -1,0 +1,66 @@
+.roomDetailsContainer {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3% 0%;
+
+    .slick-next {
+        right: 1%;
+    }
+
+    .slick-prev {
+        left: 2%;
+        z-index: 10;
+    }
+
+    .imageGallery {
+        width: 40%;
+        border-radius: 10px;
+
+        .galleryItem {
+            padding: 40% 0%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            background-position: center;
+            height: 100%;
+        }
+    }
+
+    .roomDetails {
+        width: 50%;
+
+        .roomName {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .description {
+            line-height: 2;
+            font-weight: 200;
+            padding: 5% 0%;
+        }
+
+        .checkAvailability {
+            .checkAvailabilityRoomDetails {
+                position: static;
+                width: 100%;
+                margin: 3% 0%;
+                .box {
+                    .adult {
+                        .value {
+                            width: 54%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #777777;
+}

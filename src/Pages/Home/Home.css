@@ -33,94 +33,110 @@
         }
     }
 
-    .checkAvailabilityContainer {
-        position: absolute;
+ 
+}
+.checkAvailabilityContainer {
+    position: absolute;
+    display: flex;
+    bottom: -10%;
+    /* align-items: ; */
+    justify-content: space-around;
+    color: black;
+    padding: 2% 2%;
+    width: 50%;
+    background-color: white;
+    left: 25%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    .value {
         display: flex;
-        bottom: -10%;
-        /* align-items: ; */
+        column-gap: 5%;
+        align-items: center;
+        
+        .datepickerOpener{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .date {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .month {
+            font-weight: 600;
+        }
+
+    }
+
+    .box {
+        display: flex;
+        width: 100%;
         justify-content: space-around;
-        color: black;
-        padding: 2% 2%;
-        width: 50%;
-        background-color: white;
-        left: 25%;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-        .value {
-            display: flex;
-            column-gap: 5%;
-            align-items: center;
-            
-            .datepickerOpener{
-                font-size: 2rem;
-                cursor: pointer;
-            }
-            .date {
+        align-items: center;
+        .text {
+            font-weight: 700;
+            color: gray;
+            font-size: 0.9em;
+        }
+        
+        .adult {
+            width: 10%;
+            .value {
+                /* font-size: 3rem; */
+                font-weight: 600;
                 font-size: 3rem;
-                font-weight: 600;
+                width: 50%;
+                outline: none;
+                border: none;
+                padding: 6% 0%;
             }
-
-            .month {
-                font-weight: 600;
-            }
-
         }
 
-        .box {
-            display: flex;
+    }
+
+    .checkAvailability {
+        width: 25%;
+ 
+        .checkAvailabilityBtn {
+            background-color:#006400;
+            color: white;
+            padding: 3% 2.5%;
             width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            .text {
-                font-weight: 700;
-                color: gray;
-                font-size: 0.9em;
-            }
-            
-            .adult {
-                .value {
-                    /* font-size: 3rem; */
-                    font-size: 3rem;
-                    width: 50%;
-                    outline: none;
-                    border: none;
-                    padding: 6% 0%;
-                }
-            }
-
-        }
-
-        .checkAvailability {
-            width: 25%;
-
-            .checkAvailabilityBtn {
-                background-color: green;
-                color: white;
-                padding: 3% 2.5%;
-                width: 1005;
-                cursor: pointer;
-                text-align: center;
-                border-radius: 10px;
-            }
-        }
-
-        .box>div {
-            width: 20%
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
         }
     }
-}
 
+    .box>div {
+        width: 20%
+    }
+}
 .roomsContainer {
     background-color: var(--orange);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 2% 0%;
+    margin-top: 4.5%;
 
     .room {
-        padding: 13% 10%;
-        background-position: center;
-        background-size: contain;
+        padding: 6%;
+        background-color: #e9baba;
+        background-blend-mode: multiply;
+        background-position: bottom;
+        background-size: cover;
         background-repeat: no-repeat;
         width: 23%;
+        cursor: pointer;
+        text-align: center;
+        border-radius:7px;
+        .roomName{
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -150,6 +166,7 @@
     .right {
         width: 35%;
         background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 
@@ -202,4 +219,7 @@
         width: 27%;
         font-size: 1.3rem;
     }
+}
+.mobileCheckAvailability{
+    display: none;
 }
