@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
 import { RoomDetails } from "./Pages/RoomDetails/RoomDetails";
 import { About } from "./Pages/About/About";
+import { Activity } from "./Pages/Activites/Activity";
 
 export const AllRoutes = () => {
     let element = useRoutes([
@@ -12,6 +13,10 @@ export const AllRoutes = () => {
         {
             path: "/About",
             element: <About />,
+        },
+        {
+            path: "/Activities",
+            element: <Activity />,
         },
         // {
         //     path: "*",

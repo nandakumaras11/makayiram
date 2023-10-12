@@ -1,9 +1,29 @@
-.footerContainer{
+.footerContainer {
     position: absolute;
-    bottom: 0;
+
     width: 100%;
-    padding: 2%;
+    padding: 5% 10%;
     background-color: black;
     color: white;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    .mainHead {
+        text-transform: uppercase;
+        margin-bottom: 7%;
+    }
+
+    .menuItem {
+        font-size: 0.9rem;
+        font-weight: 200;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        width: 23%;
+        line-height: 2.5;
+        text-align: left;
+    }
 }

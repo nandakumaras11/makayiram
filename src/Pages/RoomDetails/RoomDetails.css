@@ -48,6 +48,7 @@
                 position: static;
                 width: 100%;
                 margin: 3% 0%;
+
                 .box {
                     .adult {
                         .value {
@@ -63,4 +64,8 @@
 .slick-prev:before,
 .slick-next:before {
     color: #777777;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
 }

@@ -8,27 +8,32 @@
 
     .menuItem {
         width: 7%;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: 700;
         cursor: pointer;
+        text-transform: uppercase;
     }
-    
+
     .logo {
         padding: 4% 0%;
         width: 12%;
+        order: 3;
         background-image: url(/src/assets/mlogo.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
     }
-    .ratesreservation{
+
+    .ratesreservation {
         width: 12%;
+        order: 6;
     }
-    .socialMediaContainer{
-        display: flex;
-        /* justify-content: space-evenly; */
-        font-size: 2em;
-        column-gap: 8%;
-        align-items: center;
-    }
+}
+
+.socialMediaContainer {
+    display: flex;
+    /* justify-content: space-evenly; */
+    font-size: 2em;
+    column-gap: 8%;
+    align-items: center;
 }

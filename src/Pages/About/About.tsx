@@ -1,15 +1,27 @@
 import { aboutMakayiram } from "../../Constents"
-import { aboutBg, bannerBg, geminiThumb } from "../../Images"
+import { aboutbanner } from "../../Images"
 import "./About.css"
+type BannerProps = {
+    image: string,
+    head: string,
+    tagline: string
+}
+export function Banner({ image, head, tagline }: BannerProps) {
+    return (<div className="aboutUsBanner" style={{
+        backgroundImage: `url(${image})`
+    }}>
+        <div className="head">{head}</div>
+
+        <div className="taglin">
+            {tagline}
+        </div>
+    </div>);
+}
+
+
 export const About = () => {
     return (<>
-        <div className="aboutUsBanner" style={{ backgroundImage: `url(${bannerBg})` }}>
-            <div className="head">About Makayiram</div>
-
-            <div className="taglin">
-                “Life is either a daring adventure or nothing at all.”
-            </div>
-        </div>
+        <Banner head="About Makayiram" image={aboutbanner} tagline="Life is either a daring adventure or nothing at all." />
         <div className="aboutContainer" >
             <div className="aboutContent">
                 <div className="description">{aboutMakayiram}</div>
