@@ -1,5 +1,5 @@
 import { menuDetails } from "../../Constents"
-import { FaBars, FaFacebookSquare, FaInstagram, FaTimes, FaYoutube } from "react-icons/fa"
+import { FaBars, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaTimes, FaYoutube } from "react-icons/fa"
 import { logo } from "../../Images"
 import { NavHashLink } from 'react-router-hash-link'
 import "./Menu.css"
@@ -29,6 +29,7 @@ export const SocialMediaMenu = () => {
             <div className="faceBook" onClick={() => window.open(import.meta.env.VITE_FB, '_self', 'rel=noopener noreferrer')}><FaFacebookSquare /></div>
             <div className="faceBook" onClick={() => window.open(import.meta.env.VITE_INSTA, '_self', 'rel=noopener noreferrer')}><FaInstagram /></div>
             <div className="faceBook" onClick={() => window.open(import.meta.env.VITE_YOUTUBE, '_self', 'rel=noopener noreferrer')}><FaYoutube /></div>
+            <div className="faceBook" onClick={() => window.open(import.meta.env.VITE_MAP, '_self', 'rel=noopener noreferrer')}><FaMapMarkerAlt /></div>
             {/* <div className="faceBook"><FaInstagram /></div>
             <div className="faceBook"><FaYoutube /></div> */}
         </div>
@@ -38,9 +39,18 @@ export const SocialMediaMenu = () => {
 export const MenuLinks = (props: any) => {
     return (<>
         {menuDetails.map((menu) => {
-            return <NavHashLink key={menu.menu} style={{ order: menu.order }} className="menuItem" smooth to={menu.to}><div onClick={() => props.handleMobileMenu(false)} className="menuItem">{menu.menu}</div></NavHashLink >
+            return <NavHashLink scroll={(el) => scrollWithOffset(el)} key={menu.menu} style={{ order: menu.order }} className="menuItem" smooth to={menu.to}><div onClick={() => props.handleMobileMenu(false)} className="menuItem">{menu.menu}</div></NavHashLink >
         })}
         {props.children}
     </>
     )
 }
+
+
+
+
+export const scrollWithOffset = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};

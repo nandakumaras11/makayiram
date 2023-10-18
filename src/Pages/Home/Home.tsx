@@ -41,7 +41,7 @@ export function CheckAvailability({ cls = "" }: CheckAvailabilityProps) {
                 <input className="value" value={adult} type="number" onChange={(event: any) => setAdult(event.target.value)} min={1} max={10} name="" id="" />
             </div>
             <div className="checkAvailability">
-                <a className="whatsappLink" href={`whatsapp://send?text=I need a stay from ${startDate.getDay} to ${endDate} for ${adult} adults .&phone="${import.meta.env.VITE_MOBILE}"`}>
+                <a className="whatsappLink" href={`whatsapp://send?text=I need a stay from ${startDate.getDate()} - ${startDate.getMonth()}- ${startDate.getFullYear()}  to  ${endDate.getDate()} - ${endDate.getMonth()}- ${endDate.getFullYear()} for ${adult}  adults .&phone="${import.meta.env.VITE_MOBILE}"`}>
                     <div className="checkAvailabilityBtn">Check Availability</div>
                 </a>
             </div>
@@ -79,6 +79,7 @@ export const Home = () => {
                     <div className="head">About US</div>
                     {/* <div className="head">Who We Are</div> */}
                     <div className="description">{aboutHomePageContent}</div>
+                    <div className="aboutMoreBtn" onClick={() => navigate("/About")}>More</div>
                 </div>
                 <div className="right" style={{ backgroundImage: `url(${treakingImg})` }}>
 
@@ -88,9 +89,15 @@ export const Home = () => {
                 <div className="head">Guest's Expressions</div>
                 <div className="testimonialSliderContainer">
                     <div className="testimonial">
-                        <FaQuoteLeft />   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod sodales odio in imperdiet. Integer tincidunt luctus eros vitae maximus. Nulla a erat erat. Fusce ac enim tortor. Nunc in leo porta risus placerat malesuada quis a felis.  <FaQuoteRight />
+                        <FaQuoteLeft />  Hi,
+                        Makayiram Retreat was a treat for the senses. The cool air, the hot scenery,
+                        the overwhelming ambience, the opulent cuisine; everything was pitch-
+                        perfect. The verdant cardamom plantation was truly breath-taking and the
+                        trail walk proved to be a refreshing experience. Highly recommended if you
+                        are looking for a rejuvenating weekend stay.
+                        Regards <FaQuoteRight />
                     </div>
-                    <div className="auther">Artin</div>
+                    <div className="auther">Vishnu</div>
                     <div className="rating"><FaStar /><FaStar /><FaStar /> <FaStar /><FaStar /></div>
                 </div>
             </section>
@@ -102,11 +109,11 @@ export const Home = () => {
                 <div className="addresses">
                     <div className="address">
                         <div className="line">Makayiram Retreat</div>
-                        <div className="line">PB NO 40, Munnar - Bison Valley Road</div>
+                        <div className="line">Munnar - Bison Valley Road</div>
                         <div className="line">Pothamedu, Munnar, kerala 685612</div>
                         <div className="line">reservation@makayiram.com</div>
 
-                        <div className="line">+91 9895454152</div>
+                        <div className="line">{import.meta.env.VITE_MOBILE.replace("+91", "+91, ")}</div>
                     </div>
                     <div className="address mt dotedLine">
                         <div className="line mt">Registered Office</div>

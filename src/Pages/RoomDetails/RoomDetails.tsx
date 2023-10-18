@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import "./RoomDetails.css"
+import { useEffect } from "react"
 import { roomDetails, subRoomDetails } from "../../Constents";
 import { CheckAvailability } from "../Home/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { FaArrowCircleLeft } from "react-icons/fa";
 type SingleRoomDetailsProps = {
   images: string[]
   settings: any,
@@ -13,7 +15,9 @@ type SingleRoomDetailsProps = {
   rowReverse?: boolean
 }
 function SingleRoomDetails(props: SingleRoomDetailsProps) {
+
   return (<div className={props.rowReverse ? "roomDetailsContainer rowReverse" : "roomDetailsContainer"}>
+
     <div className="imageGallery">
       <Slider {...props.settings}>
         {props.images.map(image => {
@@ -55,10 +59,16 @@ export const RoomDetails = () => {
 
     dotsClass: "slick-dots slick-thumb",
   };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [])
+
+  const navigate = useNavigate();
   return (
-    <>
+    <div className="roomDetailsParent">
+      <div className="goBack" onClick={() => navigate(-1)}><FaArrowCircleLeft /> Back</div>
       <SingleRoomDetails name={name} description={description} images={images} settings={settings} />
       {filteredSubRoomDetails ? <SingleRoomDetails name={filteredSubRoomDetails?.name} description={filteredSubRoomDetails.description} rowReverse={true} images={filteredSubRoomDetails.images} settings={settings} /> : <></>}
-    </>
+    </div>
   )
 }

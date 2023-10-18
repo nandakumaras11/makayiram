@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { aboutMakayiram } from "../../Constents"
 import { aboutbanner } from "../../Images"
 import "./About.css"
@@ -20,6 +21,10 @@ export function Banner({ image, head, tagline }: BannerProps) {
 
 
 export const About = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [])
+
     return (<>
         <Banner head="About Makayiram" image={aboutbanner} tagline="Life is either a daring adventure or nothing at all." />
         <div className="aboutContainer" >

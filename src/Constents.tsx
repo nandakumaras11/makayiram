@@ -25,7 +25,7 @@ export const roomDetails = [
     },
     {
         name: "Gemini Suite",
-        description: "When you are surrounded by green, nothing should come b’tween. And that’s precisely why our twin-roomed trail view cottage remains the pick of the lot. Located on the fringes of our trail to wilderness, you could sneak a peek at nature’s intimate moods here, eavesdropping on its many secrets!",
+        description: "When you are surrounded by green, nothing should come b’tween. And that’s precisely why our trail view suite remains the pick of the lot. Located on the fringes of our trail to wilderness, you could sneak a peek at nature’s intimate moods here, eavesdropping on its many secrets!",
         thumbline: geminiThumb,
         images: geminiImages
     },
@@ -41,7 +41,7 @@ export const subRoomDetails = [
     {
         key: "Gemini Suite",
         name: "Gemini Room",
-        description: "When you are surrounded by green, nothing should come b’tween. And that’s precisely why our twin-roomed trail view cottage remains the pick of the lot. Located on the fringes of our trail to wilderness, you could sneak a peek at nature’s intimate moods here, eavesdropping on its many secrets!",
+        description: "When it’s time to unwind, there’s a dream place in here to find. Case in point: our groovy trail view room that boasts of the best in ambience and luxury.Here, you could experience hitherto unexplored sights and sounds of nature that leave a lasting impression on your mind, enough to sway you to visit us more often.",
         thumbline: geminiThumb,
         images: geminiCImages
     },
@@ -82,3 +82,8 @@ export const activities: activitiesProps = [
 ]
 
 export const aboutHomePageContent = "Life is either a daring adventure or nothing at all.A tranquil abode in the lap of wilderness – flanked by the towering Chokramudi peak in the east – Makayiram Retreat is the perfect getaway spot for bravehearts and weary at heart that offers the holiday of a lifetime. Located on the outskirts of Pothamedu – a quaint village dotted with breathtaking views of Munnar valley – Makayiram Retreat takes ‘harmony with nature’ to new heights; creating a unique and unparalleled sensory experience for travelling souls and hardcore trekkies alike."
+export const scrollWithOffset = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};

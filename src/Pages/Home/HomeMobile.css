@@ -3,6 +3,22 @@
         --padding: 1% 5% !important;
     }
 
+    .roomDetailsParent {
+
+        .goBack {
+            z-index: 10;
+            position: absolute;
+            top: 37dvh !important;
+            right: 8% !important;
+            font-size: 1.30em;
+            display: flex;
+            flex-direction: row;
+            place-items: center;
+            column-gap: 4%;
+            cursor: pointer;
+        }
+    }
+
     .rowReverse {
         flex-direction: column !important;
     }
