@@ -32,10 +32,10 @@ import geminic4 from "./assets/geminicottage/geminic4.jpg"
 import geminic5 from "./assets/geminicottage/geminic5.jpg"
 
 
-import room1 from "./assets/room1.jpg"
-import room2 from "./assets/room2.jpg"
-import room3 from "./assets/room3.jpg"
-import room4 from "./assets/room4.jpg";
+import room1 from "./assets/room1.png"
+import room2 from "./assets/room2.png"
+import room3 from "./assets/room3.png"
+import room4 from "./assets/room4.png";
 import treaking from "./assets/aboutmakayiram.jpg";
 import _aboutBG from "./assets/aboutbg.png";
 import _avtivitiesBg from "./assets/avtivitiesBg.jpg"

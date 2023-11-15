@@ -110,14 +110,7 @@
             padding: 5% 2%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-            .adult {
-                width: 22%;
 
-                .value {
-                    text-align: center;
-                    font-size: 2rem !important;
-                }
-            }
 
             .checkAvailability {
                 margin-top: 2%;
