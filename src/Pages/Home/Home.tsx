@@ -5,7 +5,7 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaAngleDown, FaEnvelope, FaPhoneAlt, FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
-import { aboutHomePageContent, roomDetails } from "../../Constents";
+import { aboutHomePageContent, newRoomDetails } from "../../Constents";
 import { useNavigate } from 'react-router-dom'
 type CheckAvailabilityProps = {
     cls?: String
@@ -71,7 +71,7 @@ export function CheckAvailability({ cls = "" }: CheckAvailabilityProps) {
                 </div> */}
                 <div className="checkAvailability">
                     {/* <a className="whatsappLink" href={`whatsapp://send?text=I need a stay from ${startDate.getDate()} - ${startDate.getMonth()}- ${startDate.getFullYear()}  to  ${endDate.getDate()} - ${endDate.getMonth()}- ${endDate.getFullYear()} for ${adult}  adults .&phone="${import.meta.env.VITE_MOBILE}"`}> */}
-                    <button className="checkAvailabilityBtn">Check Availability</button>
+                    <button className="checkAvailabilityBtn">BOOK NOW</button>
                     {/* </a> */}
                 </div>
             </div>
@@ -94,9 +94,10 @@ export const Home = () => {
             </div>
             <CheckAvailability cls="mobileCheckAvailability checkAvailabilityInline" />
             <div className="roomsContainer" id="rooms" >
-                {roomDetails.map((room) => {
-                    return <div className="room" style={{ backgroundImage: `url(${room.thumbline})` }} key={room.name}
-                        onClick={() => { navigate(`/RoomDetails/${room.name}`) }}>
+                {newRoomDetails.map((room) => {
+                    return <div className="room" style={{ backgroundImage: `url(${room.thumbline})` }} key={room.category}
+                        // return <div className="room" style={{ backgroundImage: `url(${room.thumbline})` }} key={room.name}
+                        onClick={() => { navigate(`/RoomDetails/${room.category}`, { state: {} }) }}>
                         {/* to={`/RoomDetails:${room.name}`}> */}
                         {/* <div className="roomName">{room.name}</div> */}
                     </div>
@@ -137,18 +138,18 @@ export const Home = () => {
                 </div>
                 <div className="addresses">
                     <div className="address">
-                        <div className="line">Makayiram Retreat,</div>
-                        <div className="line">Munnar - Bison Valley Road,</div>
+                        <div className="line">Makayiram Retreat</div>
+                        <div className="line"> Periyachola, Pothamedu, Munnar - 685612</div>
                         <div className="line">Pothamedu, Munnar, Kerala – 685 612.</div>
                         {/* <div className="line">reservation@makayiram.com</div> */}
 
-                        <div className="line" style={{ display: "flex", placeItems: "center", gap: "2%" }}><FaPhoneAlt /> +91 99958 07080</div>
+                        <div className="line" style={{ display: "flex", placeItems: "center", gap: "2%" }}><FaPhoneAlt /> +91 85909 87080</div>
                     </div>
                     <div className="address mt dotedLine">
                         <div className="line mt">Registered Office:</div>
                         <div className="line">6th Floor, Metro Plaza,</div>
                         <div className="line">Market Road, Kochi, Kerala – 682 014.</div>
-                        <div className="line" style={{ display: "flex", placeItems: "center", gap: "2%" }}><FaEnvelope /> reservation@makayiram.com</div>
+                        <div className="line" style={{ display: "flex", placeItems: "center", gap: "2%" }}><FaEnvelope />reservations@makayiram.com</div>
 
                         {/* <div className="line">+91 9895454152</div> */}
                     </div>

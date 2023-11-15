@@ -22,7 +22,7 @@ export const AllRoutes = () => {
         //     path: "*",
         //     element: <NotFound />,
         // },
-        { path: "/RoomDetails/:roomName", element: <RoomDetails /> },
+        { path: "/RoomDetails/:roomCategory", element: <RoomDetails /> },
     ]);
 
     return element;
