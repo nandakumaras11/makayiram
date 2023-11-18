@@ -1,101 +1,132 @@
-import { capricornFirstFloorImages, capricornGroundFloorImages, capricornImages, capricornThumb, cardamom, cycling, geminiCImages, geminiImages, geminiThumb, indoor, orionImages, orionSuit_2Images, orionSuit_3Images, orionSuit_4Images, orionSuit_5Images, orionThumb, taurusImages, taurusThumb, teaWalk, walkImg } from "./Images"
+import { capricornFirstFloorImages, capricornGroundFloorImages, capricornThumb, capricorunFF_Icon, capricorunGF_Icon, cardamom, cycling, geminiCImages, geminiImages, geminiRoom_Icon, geminiSuit_Icon, geminiThumb, indoor, orionImages, orionRoom1Icon, orionRoom2Icon, orionRoom3Icon, orionRoom4Icon, orionRoom5Icon, orionSuit_2Images, orionSuit_3Images, orionSuit_4Images, orionSuit_5Images, orionThumb, taurusImages, taurusThumb, taurus_Icon, teaWalk, walkImg } from "./Images"
 export const newRoomDetails = [
     {
         category: "Suites", rooms: [
             {
-                name: "Orion Suite – 01",
+                name: "Orion - 01 ",
                 Categorisation: "Suite with garden view",
-                description: "Bath attached room with a sit-out & patio with garden view",
+                descriptionOld: "Bath attached room with a sit-out & patio with garden view",
+                description: "Suite room with a sit-out & patio that offers a gorgeous garden view.",
+                detailedDescription: "The aesthetically-designed suite rooms of this pentagonal complex are surrounded by tall trees as far as eyes could see. Look yonder and you will find huge sweet pots dangling, dripping the golden elixir like there’s no tomorrow. Wake up and smell the honey, honey!",
                 occupancy: 3,
                 Tariff: "11,500.00 (2 pax/exclusive of taxes)",
-                photos: orionImages
+                photos: orionImages,
+                icon: orionRoom1Icon
             },
             {
-                name: "Orion Suite – 02",
+                name: "Orion – 02",
                 Categorisation: "Suite with garden view",
-                description: "Bath-attached room with a sit-out and patio with garden view",
+                descriptionOld: "Bath-attached room with a sit-out and patio with garden view",
+                description: "Suite room with a sit-out & patio that offers a gorgeous garden view.",
+                detailedDescription: "The aesthetically-designed suite rooms of this pentagonal complex are surrounded by tall trees as far as eyes could see. Look yonder and you will find huge sweet pots dangling, dripping the golden elixir like there’s no tomorrow. Wake up and smell the honey, honey!",
                 occupancy: 3,
                 Tariff: "11,500.00 (2 pax/exclusive of taxes)",
-                photos: orionSuit_2Images //change
+                photos: orionSuit_2Images, //change
+                icon: orionRoom2Icon
             },
             {
-                name: "Orion Suite – 03",
+                name: "Orion – 03",
                 Categorisation: "Suite with plantation view",
-                description: "Bath-attached room with a sit-out and patio with green plantation view",
+                descriptionOld: "Bath-attached room with a sit-out and patio with green plantation view",
+                description: "Suite room with a sit-out & patio that offers a gorgeous garden view.",
+                detailedDescription: "The aesthetically-designed suite rooms of this pentagonal complex are surrounded by tall trees as far as eyes could see. Look yonder and you will find huge sweet pots dangling, dripping the golden elixir like there’s no tomorrow. Wake up and smell the honey, honey!",
+
                 occupancy: 3,
                 Tariff: "11,500.00 (2 pax/exclusive of taxes)",
-                photos: orionSuit_3Images //change
+                photos: orionSuit_3Images, //change
+                icon: orionRoom3Icon,
             },
             {
-                name: "Orion Suite – 04",
+                name: "Orion – 04",
                 Categorisation: "Suite with plantation view",
-                description: "Bath-attached room with a sit-out and patio withgreen  plantation view",
+                descriptionOld: "Bath-attached room with a sit-out and patio with green  plantation view",
+                description: "Suite room with a sit-out & patio that offers a gorgeous garden view.",
+                detailedDescription: "The aesthetically-designed suite rooms of this pentagonal complex are surrounded by tall trees as far as eyes could see. Look yonder and you will find huge sweet pots dangling, dripping the golden elixir like there’s no tomorrow. Wake up and smell the honey, honey!",
                 occupancy: 3,
                 Tariff: "11,500.00 (2 pax/exclusive of taxes)",
-                photos: orionSuit_4Images //change
+                photos: orionSuit_4Images,
+                icon: orionRoom4Icon
             },
             {
-                name: "Orion Suite – 05",
+                name: "Orion – 05",
                 Categorisation: "Suite with plantation view",
-                description: "Bath-attached room with a sit-out and patio withgreen  plantation view",
+                descriptionOld: "Bath-attached room with a sit-out and patio with green  plantation view",
+                description: "Suite room with a sit-out & patio that offers a gorgeous garden view.",
+                detailedDescription: "The aesthetically-designed suite rooms of this pentagonal complex are surrounded by tall trees as far as eyes could see. Look yonder and you will find huge sweet pots dangling, dripping the golden elixir like there’s no tomorrow. Wake up and smell the honey, honey!",
                 occupancy: 3,
                 Tariff: "11,500.00 (2 pax/exclusive of taxes)",
-                photos: orionSuit_5Images //change
+                photos: orionSuit_5Images,
+                icon: orionRoom5Icon
             },
             {
                 name: "Gemini Suite",
                 Categorisation: "Suite with plantation trail view",
-                description: "Bath-attached room with a living room and balcony with plantation trail view",
+                descriptionOld: "Bath-attached room with a living room and balcony with plantation trail view",
+                description: "Suite room with a living room and balcony that presents an amazing view of the plantation trail.",
+                detailedDescription: "When you are surrounded by green, nothing should come b’tween. And that’s precisely why our trail view suite remains the pick of the lot.Located on the fringes of our trail to wilderness, you could sneak a peek at nature’s intimate moods here, eavesdropping on its many secrets!",
                 occupancy: 3,
                 Tariff: "10,000.00 (2 pax/exclusive of taxes)",
-                photos: geminiImages //change
+                photos: geminiImages,
+                icon: geminiSuit_Icon
             },
         ],
         thumbline: orionThumb,
-    },
-    {
-        category: "cottages", rooms: [
-            {
-                name: "Taurus",
-                Categorisation: "Plantation cottage with two bedrooms,garden and plantation view",
-                description: "Stand-alone cottage with two bath-attached bedrooms, along with living and dining rooms with plantation&; garden view",
-                occupancy: 6,
-                Tariff: "15,000.00 (5 pax/exclusive of taxes)",
-                photos: taurusImages
-            }
-        ],
-        thumbline: taurusThumb,
     },
     {
         category: "apartments", rooms: [
             {
                 name: "Capricorn – Ground Floor",
                 Categorisation: "Apartment with two bedrooms, garden and plantation view",
-                description: "Ground floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden&; plantation view",
+                descriptionOld: "Ground floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
+                description: "Ground floor of a two-floor apartment with a living room and sit-out that offers a nice view of the garden and the plantation.",
+                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
                 occupancy: 6,
                 Tariff: "9000.00 (4 pax/exclusive of taxes)",
-                photos: capricornGroundFloorImages //change
+                photos: capricornGroundFloorImages,
+                icon: capricorunGF_Icon
             },
             {
                 name: "Capricorn – First Floor",
                 Categorisation: "Apartment with two bedrooms, garden and plantation view",
-                description: "First floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden&; plantation view",
+                description: "First floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
+                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
                 occupancy: 6,
                 Tariff: "9000.00 (4 pax/exclusive of taxes)",
-                photos: capricornFirstFloorImages //change
+                photos: capricornFirstFloorImages,
+                icon: capricorunFF_Icon
             }
         ],
         thumbline: capricornThumb,
     },
     {
-        category: "Double", rooms: [
+        category: "cottages", rooms: [
+            {
+                name: "Taurus",
+                Categorisation: "Plantation cottage with two bedrooms,garden and plantation view",
+                descriptionOld: "Stand-alone cottage with two bath-attached bedrooms, along with living and dining rooms with plantation & garden view",
+                description: "Stand-alone cottage with two bedrooms, along with living and dining rooms presenting a splendid view of the plantation and the garden.",
+                detailedDescription: "Cosy. Compact. Complete. Taking a cue from the old colonial lodges, our tranquil cottage serves as the perfect vantage point to contemplate life, as nature has designed.Just a stone’s throw away from the wonders of our organic cardamom plantation, in case you were wondering!",
+                occupancy: 6,
+                Tariff: "15,000.00 (5 pax/exclusive of taxes)",
+                photos: taurusImages,
+                icon: taurus_Icon
+            }
+        ],
+        thumbline: taurusThumb,
+    },
+
+    {
+        category: "Double Rooms", rooms: [
             {
                 name: "Gemini Room",
                 Categorisation: "Room with balcony and plantation trail view",
-                description: "Bath-attached room with a balcony with plantation trail view",
+                descriptionOld: "Bath-attached room with a balcony with plantation trail view",
+                description: "Double room with a balcony providing a nice view of the plantation trail.",
+                detailedDescription: "When it’s time to unwind, there’s a dream place in here to find. Case in point: our groovy trail view room that boasts of the best in ambience and luxury. Here, you could experience hitherto unexplored sights and sounds of nature that leave a lasting impression on your mind, enough to sway you to visit us more often.",
                 occupancy: 3,
                 Tariff: "8000.00 (2 pax/exclusive of taxes)",
-                photos: geminiCImages
+                photos: geminiCImages,
+                icon: geminiRoom_Icon
             },
         ],
         thumbline: geminiThumb,
@@ -109,7 +140,8 @@ export const menuDetails = [
     { menu: "About", to: "/About", order: 1 },
     { menu: "Rooms", to: "/#rooms", order: 2 },
     { menu: "Activities", to: "/activities", order: 4 },
-    { menu: "Contact", to: "/#contact", order: 5 }
+    { menu: "Contact", to: "/#contact", order: 5 },
+    { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=211c3a15b7e54424a665f96dd648aa7d", order: 7 }
     // { menu: "logo", to: "", img: "logo.jpg" },
     // { menu: "Rates & Reservation", to: "" },
 ]

@@ -16,7 +16,6 @@ export const Menu = () => {
                     <div className="menuItem logo desktopOnly" onClick={() => { navigate("/") }} style={{ backgroundImage: `url(${logo})` }}></div>
                 </MenuLinks>
                 <div className="menuItem socialmedia ratesreservation"><SocialMediaMenu /></div>
-
             </div>
             <div className="mobileMenuOpener mobileOnly" onClick={() => handleMobileMenu(true)}><FaBars /></div>
         </>
@@ -39,7 +38,10 @@ export const SocialMediaMenu = () => {
 export const MenuLinks = (props: any) => {
     return (<>
         {menuDetails.map((menu) => {
-            return <NavHashLink scroll={(el) => scrollWithOffset(el)} key={menu.menu} style={{ order: menu.order }} className="menuItem" smooth to={menu.to}><div onClick={() => props.handleMobileMenu(false)} className="menuItem">{menu.menu}</div></NavHashLink >
+            if (menu.externalLink)
+                return <a key={menu.menu} style={{ order: menu.order }} className="menuItem" href={menu.externalLink}><div onClick={() => props.handleMobileMenu(false)} className={`${menu.to === "bookNow" ? "menuItem bookNow" : "menuItem"}`}>{menu.menu}</div></a >
+            else
+                return <NavHashLink scroll={(el) => scrollWithOffset(el)} key={menu.menu} style={{ order: menu.order }} className="menuItem" smooth to={menu.to}><div onClick={() => props.handleMobileMenu(false)} className="menuItem">{menu.menu}</div></NavHashLink >
         })}
         {props.children}
     </>

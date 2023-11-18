@@ -3,16 +3,23 @@
         --padding: 1% 5% !important;
     }
 
+    .hidden li {
+        min-height: 45px !important;
+        opacity: 1 !important;
+    }
+
     .roomDetailsParent {
+        margin-top: 18% !important;
 
         .goBack {
             z-index: 10;
             position: absolute;
-            top: 37dvh !important;
-            right: 8% !important;
+            top: 33.5dvh !important;
+            width: 20% !important;
+            right: 5% !important;
             font-size: 1.30em;
-            display: flex;
-            flex-direction: row;
+            display: flex !important;
+            justify-content: center !important;
             place-items: center;
             column-gap: 4%;
             cursor: pointer;
@@ -88,47 +95,55 @@
 
     .checkAvailabilityInline {
         position: static;
-        width: 100%;
+        width: 100% !important;
 
-        /* padding: var(--padding); */
-        .date {
-            font-size: 2rem !important;
-            font-weight: 600;
-        }
+        .form {
 
-        .value {
-            .datepickerOpener {
-                font-size: 1em;
+            /* padding: var(--padding); */
+            .date {
+                font-size: 2rem !important;
+                font-weight: 600;
             }
-        }
 
-        .box {
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5% 2%;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-
-
-            .checkAvailability {
-                margin-top: 2%;
-                width: 100%;
-
-                .whatsappLink {
-                    width: 100%;
-
+            .value {
+                .datepickerOpener {
+                    font-size: 1em;
                 }
             }
-        }
 
-        .box>div {
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            .box {
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5% 2%;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+                .checkAvailability {
+                    margin-top: 2%;
+                    width: 100% !important;
+
+                    .checkAvailabilityBtn {
+                        /* padding: 0; */
+                        padding: 3% 2.5%;
+                    }
+
+                    .whatsappLink {
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            .box>div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 
@@ -183,9 +198,19 @@
         }
     }
 
+    .checkAvailabilityContainer {
+        box-shadow: none;
+        padding: 0px;
+        /* flex-wrap: wrap;
+        display: flex; */
+    }
+
     .roomDetailsContainer {
         flex-direction: column;
-        margin-top: 13% !important;
+        margin: 0% !important;
+        padding: var(--padding);
+        margin-top: 0% !important;
+        box-shadow: none !important;
 
         .imageGallery {
             width: 100% !important;
@@ -193,6 +218,7 @@
 
         .roomDetails {
             width: 100% !important;
+            box-shadow: none;
 
             .roomName {
                 padding-top: 5%;

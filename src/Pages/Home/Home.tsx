@@ -1,12 +1,13 @@
 import "./Home.css"
 import "./HomeMobile.css"
-import { bannerBg, logo, treakingImg } from "../../Images"
+import { treakingImg } from "../../Images"
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaAngleDown, FaEnvelope, FaPhoneAlt, FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { aboutHomePageContent, newRoomDetails } from "../../Constents";
 import { useNavigate } from 'react-router-dom'
+import { SliderSimple } from "../../Components/Slider/Slider";
 type CheckAvailabilityProps = {
     cls?: String
 }
@@ -40,7 +41,7 @@ export function CheckAvailability({ cls = "" }: CheckAvailabilityProps) {
         return date.toLocaleString("default", { month: "long" });
     }
     return (<section className={`checkAvailabilityContainer ${cls}`}>
-        <form name="resBooking" id="resBooking" action="https://bookings.resavenue.com/resBooking4/searchRooms"
+        <form name="resBooking" className="form" id="resBooking" action="https://bookings.resavenue.com/resBooking4/searchRooms"
             method="POST" target="_blank">
             <div className="box">
                 <div className="checkIn">
@@ -80,33 +81,40 @@ export function CheckAvailability({ cls = "" }: CheckAvailabilityProps) {
 }
 
 
+
+function Rooms() {
+    const navigate = useNavigate();
+    return (<div className="roomsContainer" id="rooms">
+        {newRoomDetails.map(room => {
+            return <div className="room" style={{
+                backgroundImage: `url(${room.thumbline})`
+            }} key={room.category} onClick={() => {
+                navigate(`/RoomDetails/${room.category}`, {
+                    state: {}
+                });
+            }}>
+                {
+                    /* to={`/RoomDetails:${room.name}`}> */
+                }
+                {
+                    /* <div className="roomName">{room.category}</div> */
+                }
+            </div>;
+        })}
+
+    </div>);
+}
+
+
 export const Home = () => {
     const navigate = useNavigate();
     return (
         <>
-            <div className="banner" style={{ backgroundImage: `url(${bannerBg})` }}>
-                <div className="bannerText">
-                    <div className="logo mobileOnly" style={{ backgroundImage: `url(${logo})` }}></div>
-                    <div className="tagLine">Harmony With Nature</div>
-                    <div className="subTagline">Makayiram plantation retreat</div>
-                </div>
-                <CheckAvailability cls="desktopOnly" />
-            </div>
-            <CheckAvailability cls="mobileCheckAvailability checkAvailabilityInline" />
-            <div className="roomsContainer" id="rooms" >
-                {newRoomDetails.map((room) => {
-                    return <div className="room" style={{ backgroundImage: `url(${room.thumbline})` }} key={room.category}
-                        // return <div className="room" style={{ backgroundImage: `url(${room.thumbline})` }} key={room.name}
-                        onClick={() => { navigate(`/RoomDetails/${room.category}`, { state: {} }) }}>
-                        {/* to={`/RoomDetails:${room.name}`}> */}
-                        {/* <div className="roomName">{room.name}</div> */}
-                    </div>
-                })}
-
-            </div>
+            <SliderSimple />
+            {/* <CheckAvailability cls="mobileCheckAvailability checkAvailabilityInline" /> */}
             <section className="experiencesContainer" id="activities">
                 <div className="left">
-                    <div className="head">About US</div>
+                    {/* <div className="head">About US</div> */}
                     {/* <div className="head">Who We Are</div> */}
                     <div className="description">{aboutHomePageContent}</div>
                     <div className="aboutMoreBtn" onClick={() => navigate("/About")}>More</div>
@@ -115,6 +123,8 @@ export const Home = () => {
 
                 </div>
             </section>
+            <Rooms />
+
             <section className="testimonialContainer">
                 <div className="head">Guest's Expressions</div>
                 <div className="testimonialSliderContainer">
@@ -139,8 +149,8 @@ export const Home = () => {
                 <div className="addresses">
                     <div className="address">
                         <div className="line">Makayiram Retreat</div>
-                        <div className="line"> Periyachola, Pothamedu, Munnar - 685612</div>
-                        <div className="line">Pothamedu, Munnar, Kerala – 685 612.</div>
+                        <div className="line"> Periyachola, Pothamedu,</div>
+                        <div className="line">Munnar - 685612</div>
                         {/* <div className="line">reservation@makayiram.com</div> */}
 
                         <div className="line" style={{ display: "flex", placeItems: "center", gap: "2%" }}><FaPhoneAlt /> +91 85909 87080</div>

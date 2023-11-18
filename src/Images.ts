@@ -1,22 +1,49 @@
 import makayiramlogo from "./assets/mlogo.png"
 import bannerImg from "./assets/banner.jpg"
 import aboutbannerImg from "./assets/aboutbanner.png"
+
+
 import orion1 from "./assets/rooms/orion/orion1.jpg"
 import orion2 from "./assets/rooms/Orion/orion2.jpg"
 import orion3 from "./assets/rooms/Orion/orion3.jpg"
 // import orion4 from "./assets/rooms/Orion/orion4.jpg"
 import orion5 from "./assets/rooms/Orion/orion5.jpg"
+import orionSuit1Icon from "./assets/icons/room1.png"
+import orionSuit2Icon from "./assets/icons/room2.png"
+import orionSuit3Icon from "./assets/icons/room3.png"
+import orionSuit4Icon from "./assets/icons/room4.png"
+import orionSuit5Icon from "./assets/icons/room5.png"
 
+export const orionRoom1Icon = orionSuit1Icon;
+export const orionRoom2Icon = orionSuit2Icon;
+export const orionRoom3Icon = orionSuit3Icon;
+export const orionRoom4Icon = orionSuit4Icon;
+export const orionRoom5Icon = orionSuit5Icon;
+
+
+import geminiSuitIcon from "./assets/icons/gemanySuit.png"
+import geminiRoomIcon from "./assets/icons/gemanyRoom.png"
+export const geminiSuit_Icon = geminiSuitIcon;
+export const geminiRoom_Icon = geminiRoomIcon;
+import capricorunGFIcon from "./assets/icons/capriconGF.png"
+import capricorunFFIcon from "./assets/icons/capriconFF.png"
+export const capricorunGF_Icon = capricorunGFIcon;
+export const capricorunFF_Icon = capricorunFFIcon;
+
+import taurusIcon from "./assets/icons/taurus.png"
+export const taurus_Icon = taurusIcon;
 import orionS1_1 from "./assets/rooms/Orion2/_DSC6503.jpg"
 import orionS1_2 from "./assets/rooms/Orion2/_DSC6510.jpg"
 import orionS1_3 from "./assets/rooms/Orion2/_DSC7101.jpg"
+import orionS1_4 from "./assets/rooms/Orion2/orion2.jpg"
 
-export const orionSuit_2Images = [orionS1_1, orionS1_2, orionS1_3]
+export const orionSuit_2Images = [orionS1_1, orionS1_2, orionS1_3, orionS1_4]
 import orionS2_1 from "./assets/rooms/Orion3/_DSC6506.jpg"
 import orionS2_2 from "./assets/rooms/Orion3/_DSC6511.jpg"
 import orionS2_3 from "./assets/rooms/Orion3/_DSC6518.jpg"
+import orionS2_4 from "./assets/rooms/Orion3/orion3.jpg"
 
-export const orionSuit_3Images = [orionS2_1, orionS2_2, orionS2_3]
+export const orionSuit_3Images = [orionS2_1, orionS2_2, orionS2_3, orionS2_4]
 import orionS3_1 from "./assets/rooms/Orion4/_DSC5447.jpg"
 import orionS3_2 from "./assets/rooms/Orion4/_DSC6502.jpg"
 import orionS3_3 from "./assets/rooms/Orion4/_DSC6504.jpg"
@@ -70,10 +97,10 @@ import geminic5 from "./assets/rooms/geminicottage/geminic5.jpg"
 
 
 
-import room1 from "./assets/room1.png"
-import room2 from "./assets/room2.png"
-import room3 from "./assets/room3.png"
-import room4 from "./assets/room4.png";
+import room1 from "./assets/icons/suits.png"
+import room2 from "./assets/icons/cottages.png"
+import room3 from "./assets/icons/double.png"
+import room4 from "./assets/icons/appartments.png";
 import treaking from "./assets/aboutmakayiram.jpg";
 import _aboutBG from "./assets/aboutbg.png";
 import _avtivitiesBg from "./assets/avtivitiesBg.jpg"
@@ -102,7 +129,7 @@ export {
 
 export const orionImages = [orion5, orion1, orion2, orion3];
 export const taurusImages = [taurus5, taurus1, taurus2, taurus3, taurus4];
-export const geminiImages = [gemini5, gemini1, gemini2, gemini3, gemini4];
+export const geminiImages = [gemini2, gemini1, gemini3, gemini4, gemini5];
 export const geminiCImages = [geminic3, geminic1, geminic2, geminic4, geminic5];
 export const capricornImages = [capricorn5, capricorn1, capricorn2, capricorn3, capricorn4];
 
