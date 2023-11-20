@@ -23,6 +23,7 @@
     .tagLine {
         font-size: 4em;
         font-weight: 600;
+        text-transform: uppercase;
     }
 
     .subTagline {

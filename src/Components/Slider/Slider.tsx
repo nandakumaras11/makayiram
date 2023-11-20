@@ -2,6 +2,7 @@ import "./Slider.css"
 import slider1 from "../../assets/Slider/slider1.jpg"
 import slider2 from "../../assets/Slider/slider2.jpg"
 import slider3 from "../../assets/Slider/slider3.jpg"
+import slider0 from "../../assets/Slider/slider0.jpg"
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,19 +14,25 @@ export const SliderSimple = () => {
     // const { t } = useTranslation();
     const slider = [
         {
+            sliderText1: "Harmony With Nature",
+            // sliderText2: "Slider1Text2",
+            // sliderText3: "Slider1Text3",
+            productImage: slider0
+        },
+        {
             sliderText1: "THE TRAIL OF HAPPINESS",
             // sliderText2: "Slider1Text2",
             // sliderText3: "Slider1Text3",
-            productImage: slider1
+            productImage: slider2
         },
         {
             sliderText1: "THE LIGHT OF TRANQUILITY",
             // sliderText2: "SliderText22",
             // sliderText3: "SliderText23",
-            productImage: slider2
+            productImage: slider1
         },
         {
-            sliderText1: "THE TASTE OF REJUVENATION",
+            sliderText1: "THE ABODE OF SERENITY",
             // sliderText2: "SliderText32",
             // sliderText3: "SliderText33",
             productImage: slider3
@@ -39,8 +46,8 @@ export const SliderSimple = () => {
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
+        vertical: false,
+        verticalSwiping: false,
         responsive: [
             {
                 breakpoint: 989,
@@ -59,7 +66,7 @@ export const SliderSimple = () => {
     };
 
     return (
-        <>
+        <div id="home">
             <Slider {...settings}>
                 {slider.map((slide, index) => {
                     return <div> <div key={index} className="sliderContainer" style={{ backgroundImage: `url(${slide.productImage})` }} >
@@ -74,7 +81,7 @@ export const SliderSimple = () => {
                     </div></div>
                 })}
             </Slider>
-        </>
+        </div>
         // <Slider {...settings}>
         //     {slider.map((slide, index) => {
         //         return <div key={index} className={`bannerContainer`}>

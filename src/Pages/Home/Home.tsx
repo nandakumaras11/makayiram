@@ -1,5 +1,4 @@
 import "./Home.css"
-import "./HomeMobile.css"
 import { treakingImg } from "../../Images"
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -129,13 +128,11 @@ export const Home = () => {
                 <div className="head">Guest's Expressions</div>
                 <div className="testimonialSliderContainer">
                     <div className="testimonial">
-                        <FaQuoteLeft />  Hi,
-                        Makayiram Retreat was a treat for the senses. The cool air, the hot scenery,
+                        <FaQuoteLeft />Makayiram Retreat was a treat for the senses. The cool air, the hot scenery,
                         the overwhelming ambience, the opulent cuisine; everything was pitch-
                         perfect. The verdant cardamom plantation was truly breath-taking and the
                         trail walk proved to be a refreshing experience. Highly recommended if you
-                        are looking for a rejuvenating weekend stay.
-                        Regards <FaQuoteRight />
+                        are looking for a rejuvenating weekend stay.<FaQuoteRight />
                     </div>
                     <div className="auther">Vishnu</div>
                     <div className="rating"><FaStar /><FaStar /><FaStar /> <FaStar /><FaStar /></div>

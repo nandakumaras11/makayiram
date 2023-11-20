@@ -1,6 +1,14 @@
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 600px) {
     body {
         --padding: 1% 5% !important;
+    }
+
+    .sliderContainer {
+        height: 100dvh;
+    }
+
+    #root {
+        padding-top: 0% !important;
     }
 
     .hidden li {
@@ -36,6 +44,20 @@
 
     .mobileOnly {
         display: block;
+    }
+
+    .tagLine {
+        font-size: 3rem !important;
+        font-weight: 600;
+        padding: 20% 5%;
+        text-transform: uppercase;
+    }
+
+    .subTagline {
+        font-weight: 500;
+        font-size: 2rem !important;
+        padding: 5% !important;
+        /* display: none; */
     }
 
     .banner {
@@ -89,8 +111,15 @@
         top: 0.5%;
         right: 3%;
         z-index: 10;
-        color: black;
         font-size: 2rem;
+    }
+
+    .black {
+        color: black;
+    }
+
+    .white {
+        color: white;
     }
 
     .checkAvailabilityInline {
@@ -164,6 +193,10 @@
 
         .left {
             width: 100%;
+
+            .aboutMoreBtn {
+                margin-bottom: 3%;
+            }
         }
 
         .right {
@@ -232,7 +265,7 @@
     }
 
     .mobilemenu {
-        position: absolute;
+        position: fixed;
         height: 100dvh;
         background-color: black;
         z-index: 1000;
@@ -249,6 +282,13 @@
             width: 100% !important;
             font-size: 1.2rem !important;
             text-align: center;
+
+            .bookNow {
+                padding: 0% !important;
+                font-size: 1rem !important;
+                width: 50% !important;
+                margin: 0 auto;
+            }
         }
 
         .mobileMenuClose {

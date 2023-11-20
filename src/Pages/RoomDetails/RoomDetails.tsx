@@ -1,11 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom"
 import "./RoomDetails.css"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { newRoomDetails } from "../../Constents";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaArrowCircleLeft, FaArrowDown, FaArrowUp } from "react-icons/fa";
 type SingleRoomDetailsProps = {
   // images: string[]
   // settings: any,
@@ -55,7 +55,7 @@ const settings = {
 
 function SingleRoomDetails(props: SingleRoomDetailsProps) {
   const { name, description, photos, icon, Categorisation, detailedDescription } = props.room;
-  // const [isPolicyHidden, togglePolicy] = useState(false);
+  const [isPolicyHidden, togglePolicy] = useState(false);
   return (<div key={props.mapkey} className={props.rowReverse ? "roomDetailsContainer rowReverse" : "roomDetailsContainer"}>
     <div className="imageGallery">
       <Slider {...settings}>
@@ -80,7 +80,7 @@ function SingleRoomDetails(props: SingleRoomDetailsProps) {
         {/* <CheckAvailability cls="checkAvailabilityRoomDetails checkAvailabilityInline" /> */}
       </div>
       <div className="bathroom">All rooms have en-suite facilities including bathrooms.</div>
-      {/* <div className="cancellation" onClick={() => togglePolicy((previous) => !previous)}><div>Cancellation Policy</div><div className="icon">{!isPolicyHidden ? <FaArrowDown /> : <FaArrowUp />}</div> </div>
+      <div className="cancellation" onClick={() => togglePolicy((previous) => !previous)}><div>Cancellation Policy</div><div className="icon">{!isPolicyHidden ? <FaArrowDown /> : <FaArrowUp />}</div> </div>
       <ul className={!isPolicyHidden ? "list" : "hidden list"}>
         <li>   15 days prior to the arrival date – Full amount refund</li>
         <li> 72 hrs prior to the arrival date – Refund of 50 % of the booking
@@ -88,7 +88,7 @@ function SingleRoomDetails(props: SingleRoomDetailsProps) {
         <li> 48 Hrs prior to the arrival date – Refund of 25 % of the booking
           amount</li>
         <li> Less than 48 hrs prior to the arrival date – No amount refund</li>
-      </ul> */}
+      </ul>
     </div>
 
   </div>);
@@ -113,8 +113,8 @@ export const RoomDetails = () => {
   const navigate = useNavigate();
   return (
     <>
+      <div className="goBack" onClick={() => navigate(-1)}><FaArrowCircleLeft /> </div>
       <div className="roomDetailsParent">
-        <div className="goBack" onClick={() => navigate(-1)}><FaArrowCircleLeft /> &nbsp; Back</div>
         {/* <div className="icon_container" style={{ backgroundImage: `url(${thumbline})` }}></div> */}
         {rooms.map((room, key) => <SingleRoomDetails room={room} mapkey={room} rowReverse={key % 2 != 0} />)}
 

@@ -1,5 +1,4 @@
 import makayiramlogo from "./assets/mlogo.png"
-import bannerImg from "./assets/banner.jpg"
 import aboutbannerImg from "./assets/aboutbanner.png"
 
 
@@ -113,7 +112,6 @@ import indoor from "./assets/indoor.jpg"
 
 
 export const logo = makayiramlogo;
-export const bannerBg = bannerImg;
 export const aboutbanner = aboutbannerImg;
 export const treakingImg = treaking;
 export const orionThumb = room1;

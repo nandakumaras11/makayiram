@@ -3,10 +3,13 @@ import { FaBars, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaTimes, FaYoutu
 import { logo } from "../../Images"
 import { NavHashLink } from 'react-router-hash-link'
 import "./Menu.css"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useState } from "react"
 export const Menu = () => {
     const navigate = useNavigate();
+    const { pathname } = useLocation()
+    console.log(location);
+
     const [isMobileMenuOpen, handleMobileMenu] = useState(false);
     return (
         <>
@@ -17,7 +20,7 @@ export const Menu = () => {
                 </MenuLinks>
                 <div className="menuItem socialmedia ratesreservation"><SocialMediaMenu /></div>
             </div>
-            <div className="mobileMenuOpener mobileOnly" onClick={() => handleMobileMenu(true)}><FaBars /></div>
+            <div className={`mobileMenuOpener mobileOnly ${pathname === "/" ? "white" : "black"}`} onClick={() => handleMobileMenu(true)}><FaBars /></div>
         </>
     )
 }
@@ -53,6 +56,6 @@ export const MenuLinks = (props: any) => {
 
 export const scrollWithOffset = (el: any) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80;
+    const yOffset = -120;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 };

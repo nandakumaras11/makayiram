@@ -136,11 +136,11 @@ export const newRoomDetails = [
     // }
 ]
 export const menuDetails = [
-    { menu: "Home", to: "/", order: 0 },
+    { menu: "Home", to: "/#home", order: 0 },
     { menu: "About", to: "/About", order: 1 },
     { menu: "Rooms", to: "/#rooms", order: 2 },
     { menu: "Activities", to: "/activities", order: 4 },
-    { menu: "Contact", to: "/#contact", order: 5 },
+    // { menu: "Contact", to: "/#contact", order: 5 },
     { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=211c3a15b7e54424a665f96dd648aa7d", order: 7 }
     // { menu: "logo", to: "", img: "logo.jpg" },
     // { menu: "Rates & Reservation", to: "" },
