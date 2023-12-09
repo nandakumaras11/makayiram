@@ -30,11 +30,10 @@
 
 }
 
+
 .checkAvailabilityContainer {
     position: absolute;
-    /* display: flex; */
     bottom: -10%;
-    /* align-items: ; */
     place-content: center;
     color: black;
     padding: 2% 2%;
@@ -189,6 +188,13 @@
     }
 }
 
+.headGallery {
+    margin: 3% 0% 0% 0%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
 .testimonialContainer {
     padding: var(--padding);
 
@@ -239,8 +245,8 @@
 
     .address {
         line-height: 1.7;
-        font-size: 1.3rem;
-        padding: 0% 2%;
+        font-size: 1.1rem;
+        padding: 0%;
     }
 
     .mt {

@@ -5,6 +5,7 @@ import { NavHashLink } from 'react-router-hash-link'
 import "./Menu.css"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { formatDate } from "../../Pages/Home/Home"
 export const Menu = () => {
     const navigate = useNavigate();
     const { pathname } = useLocation()
@@ -37,12 +38,29 @@ export const SocialMediaMenu = () => {
         </div>
     )
 }
+const BookNowButton = ({ order }: any) => {
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
 
+    var nextDayAfterTomorrow = new Date();
+    nextDayAfterTomorrow.setDate(nextDayAfterTomorrow.getDate() + 2);
+    console.log(tomorrow);
+    console.log(nextDayAfterTomorrow);
+
+    return <form style={{ order: order }} name="resBooking" className="menuItem" id="resBooking" action="https://bookings.resavenue.com/resBooking4/searchRooms" method="post" target="_blank">
+        <input type="hidden" name="curr" value="INR" />
+        <input type="hidden" name="regCode" value="VXIA1026" />
+        <input type="hidden" id="arr_date" name="arr_date" placeholder="Check-In" className="calender" value={formatDate(tomorrow)} autoComplete="off" />
+        <input type="hidden" id="dep_date" name="dep_date" placeholder="Check-Out" className="calender" value={formatDate(nextDayAfterTomorrow)} autoComplete="off" />
+        <button type="submit" className="menuItem bookNow">Book Now</button>
+    </form>
+}
 export const MenuLinks = (props: any) => {
     return (<>
         {menuDetails.map((menu) => {
             if (menu.externalLink)
-                return <a key={menu.menu} style={{ order: menu.order }} className="menuItem" href={menu.externalLink}><div onClick={() => props.handleMobileMenu(false)} className={`${menu.to === "bookNow" ? "menuItem bookNow" : "menuItem"}`}>{menu.menu}</div></a >
+                return <BookNowButton order={menu.order} />
+            // return <a key={menu.menu} style={{ order: menu.order }} className="menuItem" href={menu.externalLink}><div onClick={() => props.handleMobileMenu(false)} className={`${menu.to === "bookNow" ? "menuItem bookNow" : "menuItem"}`}>{menu.menu}</div></a >
             else
                 return <NavHashLink scroll={(el) => scrollWithOffset(el)} key={menu.menu} style={{ order: menu.order }} className="menuItem" smooth to={menu.to}><div onClick={() => props.handleMobileMenu(false)} className="menuItem">{menu.menu}</div></NavHashLink >
         })}

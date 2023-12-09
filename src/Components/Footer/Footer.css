@@ -9,6 +9,12 @@
     display: flex;
     justify-content: space-evenly;
 
+    .tripAdvisorIcon {
+        background-color: #00aa6c;
+    }
+
+    .brandName {}
+
     .mainHead {
         text-transform: uppercase;
         margin-bottom: 7%;
@@ -25,5 +31,24 @@
         width: 23%;
         line-height: 2.5;
         text-align: left;
+
+        .tripAdvisor {
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 2%;
+
+            /* font-size: 1.2rem; */
+
+            .tripAdvisorIcon {
+                font-size: 2rem;
+                width: 20%;
+                /* padding: 1%; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* flex-direction: column; */
+        }
     }
 }

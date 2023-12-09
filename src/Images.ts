@@ -109,7 +109,26 @@ import cardamom from "./assets/activities/cardamom.jpg"
 import cycling from "./assets/activities/cycling.jpg"
 import indoor from "./assets/indoor.jpg"
 
+import Barbeque1 from "./assets/ProductSlider/Barbeque/1.jpg"
+import Barbeque2 from "./assets/ProductSlider/Barbeque/2.jpg"
+import Barbeque3 from "./assets/ProductSlider/Barbeque/3.jpg"
+export const BarbequeImages = [Barbeque1, Barbeque2, Barbeque3];
 
+import Garden1 from "./assets/ProductSlider/Garden/1.jpg"
+import Garden2 from "./assets/ProductSlider/Garden/2.jpg"
+import Garden3 from "./assets/ProductSlider/Garden/3.jpg"
+
+export const Garden = [Garden1, Garden2, Garden3];
+
+import Restaurant1 from "./assets/ProductSlider/Restaurant/1.jpg"
+import Restaurant2 from "./assets/ProductSlider/Restaurant/2.jpg"
+import Restaurant3 from "./assets/ProductSlider/Restaurant/3.jpg"
+export const Restaurant = [Restaurant1, Restaurant2, Restaurant3];
+
+import Trail1 from "./assets/ProductSlider/Trail/1.jpg"
+import Trai2 from "./assets/ProductSlider/Trail/2.jpg"
+import Trail3 from "./assets/ProductSlider/Trail/3.jpg"
+export const Trail = [Trail1, Trai2, Trail3];
 
 export const logo = makayiramlogo;
 export const aboutbanner = aboutbannerImg;

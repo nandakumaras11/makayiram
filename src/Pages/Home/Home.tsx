@@ -7,10 +7,11 @@ import { FaAngleDown, FaEnvelope, FaPhoneAlt, FaQuoteLeft, FaQuoteRight, FaStar 
 import { aboutHomePageContent, newRoomDetails } from "../../Constents";
 import { useNavigate } from 'react-router-dom'
 import { SliderSimple } from "../../Components/Slider/Slider";
+import ProductSlider from "../../Components/Slider/ProductSlider/ProductSlider";
 type CheckAvailabilityProps = {
     cls?: String
 }
-function formatDate(dateObj: Date) {
+export function formatDate(dateObj: Date) {
     return dateObj.toLocaleDateString("en-GB", { // you can use undefined as first argument
         year: "numeric",
         month: "2-digit",
@@ -18,6 +19,7 @@ function formatDate(dateObj: Date) {
     })
     // return `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`
 }
+
 export function CheckAvailability({ cls = "" }: CheckAvailabilityProps) {
     const [startDate, setStartDate] = useState(new Date());
     // const [adult, setAdult] = useState(1)
@@ -92,6 +94,7 @@ function Rooms() {
                     state: {}
                 });
             }}>
+
                 {
                     /* to={`/RoomDetails:${room.name}`}> */
                 }
@@ -123,16 +126,18 @@ export const Home = () => {
                 </div>
             </section>
             <Rooms />
+            <div className="headGallery">Gallery</div>
+            <ProductSlider />
 
             <section className="testimonialContainer">
                 <div className="head">Guest's Expressions</div>
                 <div className="testimonialSliderContainer">
                     <div className="testimonial">
-                        <FaQuoteLeft />Makayiram Retreat was a treat for the senses. The cool air, the hot scenery,
+                        <FaQuoteLeft /> Makayiram Retreat was a treat for the senses. The cool air, the hot scenery,
                         the overwhelming ambience, the opulent cuisine; everything was pitch-
                         perfect. The verdant cardamom plantation was truly breath-taking and the
                         trail walk proved to be a refreshing experience. Highly recommended if you
-                        are looking for a rejuvenating weekend stay.<FaQuoteRight />
+                        are looking for a rejuvenating weekend stay. <FaQuoteRight />
                     </div>
                     <div className="auther">Vishnu</div>
                     <div className="rating"><FaStar /><FaStar /><FaStar /> <FaStar /><FaStar /></div>
@@ -146,6 +151,7 @@ export const Home = () => {
                 <div className="addresses">
                     <div className="address">
                         <div className="line">Makayiram Retreat</div>
+                        <div className="line">(A unit of Makayiram Plantations Pvt. Ltd)</div>
                         <div className="line"> Periyachola, Pothamedu,</div>
                         <div className="line">Munnar - 685612</div>
                         {/* <div className="line">reservation@makayiram.com</div> */}

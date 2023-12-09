@@ -1,6 +1,48 @@
 import { capricornFirstFloorImages, capricornGroundFloorImages, capricornThumb, capricorunFF_Icon, capricorunGF_Icon, cardamom, cycling, geminiCImages, geminiImages, geminiRoom_Icon, geminiSuit_Icon, geminiThumb, indoor, orionImages, orionRoom1Icon, orionRoom2Icon, orionRoom3Icon, orionRoom4Icon, orionRoom5Icon, orionSuit_2Images, orionSuit_3Images, orionSuit_4Images, orionSuit_5Images, orionThumb, taurusImages, taurusThumb, taurus_Icon, teaWalk, walkImg } from "./Images"
 export const newRoomDetails = [
     {
+        category: "Double Rooms", rooms: [
+            {
+                name: "Gemini Room",
+                Categorisation: "Room with balcony and plantation trail view",
+                descriptionOld: "Bath-attached room with a balcony with plantation trail view",
+                description: "Double room with a balcony providing a nice view of the plantation trail.",
+                detailedDescription: "When it’s time to unwind, there’s a dream place in here to find. Case in point: our groovy trail view room that boasts of the best in ambience and luxury. Here, you could experience hitherto unexplored sights and sounds of nature that leave a lasting impression on your mind, enough to sway you to visit us more often.",
+                occupancy: 3,
+                Tariff: "8000.00 (2 pax/exclusive of taxes)",
+                photos: geminiCImages,
+                icon: geminiRoom_Icon
+            },
+        ],
+        thumbline: geminiThumb,
+    },
+    {
+        category: "apartments", rooms: [
+            {
+                name: "Capricorn – Ground Floor",
+                Categorisation: "Apartment with two bedrooms, garden and plantation view",
+                descriptionOld: "Ground floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
+                description: "Ground floor of a two-floor apartment with a living room and sit-out that offers a nice view of the garden and the plantation.",
+                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
+                occupancy: 6,
+                Tariff: "9000.00 (4 pax/exclusive of taxes)",
+                photos: capricornGroundFloorImages,
+                icon: capricorunGF_Icon
+            },
+            {
+                name: "Capricorn – First Floor",
+                Categorisation: "Apartment with two bedrooms, garden and plantation view",
+                description: "First floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
+                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
+                occupancy: 6,
+                Tariff: "9000.00 (4 pax/exclusive of taxes)",
+                photos: capricornFirstFloorImages,
+                icon: capricorunFF_Icon
+            }
+        ],
+        thumbline: capricornThumb,
+    },
+    {
         category: "Suites", rooms: [
             {
                 name: "Orion - 01 ",
@@ -72,32 +114,7 @@ export const newRoomDetails = [
         ],
         thumbline: orionThumb,
     },
-    {
-        category: "apartments", rooms: [
-            {
-                name: "Capricorn – Ground Floor",
-                Categorisation: "Apartment with two bedrooms, garden and plantation view",
-                descriptionOld: "Ground floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
-                description: "Ground floor of a two-floor apartment with a living room and sit-out that offers a nice view of the garden and the plantation.",
-                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
-                occupancy: 6,
-                Tariff: "9000.00 (4 pax/exclusive of taxes)",
-                photos: capricornGroundFloorImages,
-                icon: capricorunGF_Icon
-            },
-            {
-                name: "Capricorn – First Floor",
-                Categorisation: "Apartment with two bedrooms, garden and plantation view",
-                description: "First floor of a two-floor apartment with two bath-attached bedrooms, living room and sit-out with garden & plantation view",
-                detailedDescription: "Adjacent to the expansive organic plantation draping the woods of Western Ghats, our fully-equipped two-storied apartment offers a bird’s-eye view of the property in all its glory. Here, you could give ear to the soothing wakeup call of our resident singer: Malabar Whistling Thrush.",
-                occupancy: 6,
-                Tariff: "9000.00 (4 pax/exclusive of taxes)",
-                photos: capricornFirstFloorImages,
-                icon: capricorunFF_Icon
-            }
-        ],
-        thumbline: capricornThumb,
-    },
+
     {
         category: "cottages", rooms: [
             {
@@ -115,22 +132,6 @@ export const newRoomDetails = [
         thumbline: taurusThumb,
     },
 
-    {
-        category: "Double Rooms", rooms: [
-            {
-                name: "Gemini Room",
-                Categorisation: "Room with balcony and plantation trail view",
-                descriptionOld: "Bath-attached room with a balcony with plantation trail view",
-                description: "Double room with a balcony providing a nice view of the plantation trail.",
-                detailedDescription: "When it’s time to unwind, there’s a dream place in here to find. Case in point: our groovy trail view room that boasts of the best in ambience and luxury. Here, you could experience hitherto unexplored sights and sounds of nature that leave a lasting impression on your mind, enough to sway you to visit us more often.",
-                occupancy: 3,
-                Tariff: "8000.00 (2 pax/exclusive of taxes)",
-                photos: geminiCImages,
-                icon: geminiRoom_Icon
-            },
-        ],
-        thumbline: geminiThumb,
-    },
     // {
     //     category: "apartments", rooms: []
     // }
@@ -141,7 +142,8 @@ export const menuDetails = [
     { menu: "Rooms", to: "/#rooms", order: 2 },
     { menu: "Activities", to: "/activities", order: 4 },
     // { menu: "Contact", to: "/#contact", order: 5 },
-    { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=211c3a15b7e54424a665f96dd648aa7d", order: 7 }
+    { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/availsearch?regCode=VXIA1026", order: 7 }
+    // { menu: "Book now", to: "bookNow", externalLink: "https://bookings.resavenue.com/resBooking/rooms?regCode=VXIA1026&roomSearchId=211c3a15b7e54424a665f96dd648aa7d", order: 7 }
     // { menu: "logo", to: "", img: "logo.jpg" },
     // { menu: "Rates & Reservation", to: "" },
 ]
